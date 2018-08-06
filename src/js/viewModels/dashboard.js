@@ -6,12 +6,13 @@
 /*
  * Your dashboard ViewModel code goes here
  */
-define(['ojs/ojcore', 'knockout', 'jquery'],
+define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojdatetimepicker'],
     function(oj, ko, $) {
 
         function DashboardViewModel() {
             var self = this;
             self.name = ko.observable("Tom");
+            self.value = ko.observable(oj.IntlConverterUtils.dateToLocalIso(new Date(2013, 0, 1)));
             // Below are a set of the ViewModel methods invoked by the oj-module component.
             // Please reference the oj-module jsDoc for additional information.
 
