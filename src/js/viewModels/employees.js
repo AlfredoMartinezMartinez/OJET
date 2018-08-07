@@ -6,11 +6,16 @@
 /*
  * Your customer ViewModel code goes here
  */
-define(['ojs/ojcore', 'knockout', 'jquery'],
+define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojpictochart'],
     function(oj, ko, $) {
 
         function EmployeesViewModel() {
             var self = this;
+            self.pictoChartItems = ko.observableArray([
+                { name: 'Have Sleep Problems', shape: 'human', count: 7, color: '#ed6647' },
+                { name: 'Sleep Well', shape: 'human', count: 3 }
+            ]);
+
             // Below are a set of the ViewModel methods invoked by the oj-module component.
             // Please reference the oj-module jsDoc for additional information.
 
