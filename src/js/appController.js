@@ -26,6 +26,7 @@ define(['ojs/ojcore', 'knockout', 'ojs/ojmodule-element-utils', 'ojs/ojmodule-el
                 'incidents': { label: 'Incidents' },
                 'customers': { label: 'Customers' },
                 'employees': { label: 'Employees' },
+                'collComponent': { label: 'Component' },
                 'about': { label: 'About' }
             });
             oj.Router.defaults['urlAdapter'] = new oj.Router.urlParamAdapter();
@@ -69,6 +70,11 @@ define(['ojs/ojcore', 'knockout', 'ojs/ojmodule-element-utils', 'ojs/ojmodule-el
                 {
                     name: 'Employees',
                     id: 'employees',
+                    iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 demo-people-icon-24'
+                },
+                {
+                    name: 'Components',
+                    id: 'collComponent',
                     iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 demo-people-icon-24'
                 },
                 {
