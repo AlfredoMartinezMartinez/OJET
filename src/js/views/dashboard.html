@@ -4,7 +4,7 @@
  -->
 <div class="oj-hybrid-padding">
     <h1>Dashboard Content Area</h1>
-    <h2><input data-bind="textInput: name" /></h2>
+    <h2><input data-bind="textInput: name"></h2>
     <h2><span data-bind="text: name"></span></h2>
 
     <div id="div1">
@@ -19,6 +19,33 @@
     </div>
 
     <div>
-        To change the content of this section, you will make edits to the dashboard.html file located in the /js/views folder.
+        <h3>Example 1: Default HTML5 date input element.</h3>
+        <div>
+            <input type="date" />
+        </div>
+        <h3>Example 2: Default ojInputaDate</h3>
+        <div>
+            <oj-input-date value='{{value }}'></oj-input-date>
+        </div>
+
+        <h3>Example 3: ojInputDate with default converter</h3>
+        <div>
+            <oj-input-date value='{{value }}' date-picker.week-display="number"></oj-input-date>
+        </div>
+
+        <h3>Example 4: ojInputDate with converter utils</h3>
+        <div>
+            <oj-input-date value='{{value }}' date-picker.week-display="number" converter='{
+                               "type":"datetime",
+                               "options":{
+                                   "year":"numeric",
+                                   "month":"long",
+                                   "day":"numeric"
+                               }
+                           }'></oj-input-date>
+        </div>
+
+
+
     </div>
 </div>

@@ -25,8 +25,10 @@ define(['ojs/ojcore', 'knockout', 'ojs/ojmodule-element-utils', 'ojs/ojmodule-el
                 'dashboard': { label: 'Dashboard', isDefault: true },
                 'incidents': { label: 'Incidents' },
                 'customers': { label: 'Customers' },
-                'employees': { label: 'Employees' },
+                'employees': { label: 'Employees', },
+                // 'employees2': { label: 'Employees2' },
                 'collComponent': { label: 'Component' },
+                'dataRest': { label: 'DataRest' },
                 'about': { label: 'About' }
             });
             oj.Router.defaults['urlAdapter'] = new oj.Router.urlParamAdapter();
@@ -70,11 +72,20 @@ define(['ojs/ojcore', 'knockout', 'ojs/ojmodule-element-utils', 'ojs/ojmodule-el
                 {
                     name: 'Employees',
                     id: 'employees',
-                    iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 demo-people-icon-24'
+                    iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 demo-people-icon-24',
+                    // children: {
+                    //     name: 'Employees2',
+                    //     id: 'employees2'
+                    // }
                 },
                 {
                     name: 'Components',
                     id: 'collComponent',
+                    iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 demo-people-icon-24'
+                },
+                {
+                    name: 'DataRest',
+                    id: 'dataRest',
                     iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 demo-people-icon-24'
                 },
                 {
